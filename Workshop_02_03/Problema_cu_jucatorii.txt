@@ -1,0 +1,54 @@
+Problema cu juacatorii:
+
+jucatori = ['Jucator1', 'Jucator2', 'Jucator3', 'Jucator4', 'Jucator5'] # lista cu jucatori
+schimbari_efectuate = 0
+schimbari_max = 3
+
+jucator_in = 'Jucator6' # cel care intra
+jucator_out = 'Jucator3' # cel care iese
+
+if jucator_out in jucatori: # verifica daca jucatorul  are iese este in lista
+    jucatori.remove(jucator_out) # sterge jucatorul existent din lista
+    jucatori.append(jucator_in) # il adauga pe cel nou
+    schimbari_efectuate += 1 # incrementeaza schimbarile
+    print(f"A intrat {jucator_in}, a iesit {jucator_out}, mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+else:
+    print(f"Nu se poate efectua schimbarea deoarece jucatorul {jucator_in} nu este in teren. Mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+# mai sus ne ramane 2 schimbari
+# Rulam in acelasi script cu alti jucatori dupa acelasi model
+jucator_in = 'Jucator7'
+jucator_out = 'Jucator2'
+
+if jucator_out in jucatori:
+    jucatori.remove(jucator_out)
+    jucatori.append(jucator_in)
+    schimbari_efectuate += 1
+    print(f"A intrat {jucator_in}, a iesit {jucator_out}, mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+else:
+    print(f"Nu se poate efectua schimbarea deoarece jucatorul {jucator_in} nu este in teren. Mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+# mai sus ne ramane o schimbare
+# Rulam in acelasi script cu alti jucatori dupa acelasi model
+jucator_in = 'Jucator9'
+jucator_out = 'Jucator4'
+
+if jucator_out in jucatori:
+    jucatori.remove(jucator_out)
+    jucatori.append(jucator_in)
+    schimbari_efectuate += 1
+    print(f"A intrat {jucator_in}, a iesit {jucator_out}, mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+else:
+    print(f"Nu se poate efectua schimbarea deoarece jucatorul {jucator_in} nu este in teren. Mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+# mai sus nu ne raman schimbari si mai jos intra in else.
+# Rulam in acelasi script cu alti jucatori dupa acelasi model
+jucator_in = 'Jucator1'
+jucator_out = 'Jucator4'
+
+if jucator_out in jucatori:
+    jucatori.remove(jucator_out)
+    jucatori.append(jucator_in)
+    schimbari_efectuate += 1
+    print(f"A intrat {jucator_in}, a iesit {jucator_out}, mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+else:
+    print(f"Nu se poate efectua schimbarea deoarece jucatorul {jucator_in} nu este in teren. Mai ai {schimbari_max - schimbari_efectuate} schimbari.")
+
+Ca sa intram in else trebuie sa executam liniile de cod de 4 ori ca sa simulam schimbarile in acelasi timp. Sper ca am comentat suficient. Daca nu e clar imi spuneti
