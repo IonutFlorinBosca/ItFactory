@@ -4,17 +4,22 @@
 # Aruncarea exceptiilor
 x = 2
 if x < 0:
-    raise Exception("X mai mic ca 0")
+    raise Exception("X mai mic ca 0") # asa se arunca o exceptie, Exception este clasa de baza a exceptiilor
 ############################################################
 # Tratarea exceptiilor
 try:  # Verifica un bloc de cod pentru exceptii
+    # Daca codul din blocul try arunca o exceptie, se va opri exceptia in blocul except,
+    # nu se va propaga mai departe in consola
+    # Asta este de foarte mare ajutor pentru ca putem trata exceptiile inainte sa ajunga la utilizator!!
     print("C")
 except:  # Trateaza diferitele tipuri de erori
     print("A aparut o exceptie")
 # -----------------------------------------------------------
 try:
     print(1 / 0)
-except NameError:
+except NameError: # In cazul in care in blocul try avem o eroare, iar la unul din blocurile
+    # except specificam acea eroare, atunci se va duce direct la acea eroare!
+    # Daca eroarea nu este specificata atunci va merge pe ultima ramura except!!
     print("Variabila C nu este definita")
 except ZeroDivisionError as ex:  # Stocheaza exceptia in valoarea ex
     print(f"Eroarea: {ex}")
@@ -28,6 +33,7 @@ except:
 else:
     print("Se executa cand nu apare eroare")
 # Ramura try,except, else este folosita pentru a rula o bucata de cod daca nu apare eroare in blocul try
+# Nu este atat de intalnita!
 # -----------------------------------------------------------
 try:
     print("c")

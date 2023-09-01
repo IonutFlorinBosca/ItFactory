@@ -34,24 +34,30 @@ def plus_many(*args):
 
 plus_many(1, 2, 3, 4, 5, 6, 7, 8)
 plus_many()
-plus_many(*[1, 2, 3])  # Steluta se mai numeste unpacking (scoate toate elem din lista)
+plus_many(*[1, 2, 3, 6, 7, 8])  # Steluta se mai numeste unpacking (scoate toate elem din lista)
+# Steluta este o modalitate de a scoate toate acele elemente din lista
+# Steluta scoate valorile din lista si le pune ca si cum am apela functia plus_many(1,2,3)
+# !!!Argumentele trebuie sa fie pozitionale, nu trebuie sa fie argumente cu nume!!!
 
-
-def plus_many_2(**kwargs):
+def plus_many_2(**kwargs): # ** este aceeasi treaba ca si inainte doar ca in loc de tupluri sunt dictionare
+    # daca vrem sa apelam o functie cu oricate argumente, dar ele sa fie argumente cu nume, adica nume=valoare,
+    # va trebui sa le punem in kwargs!!
     print(kwargs)
-    print(sum(kwargs.values()))
+    print(sum(kwargs.values())) # aici accesam valorile cheilor si facem suma valorilor
 
 
 plus_many_2(a=1, b=2)
 plus_many_2(k=5, x=17)
 
 
-def plus_many_3(*args, **kwargs):
+def plus_many_3(*args, **kwargs): #aici combinam cele explicate mai sus
     print(args, kwargs)
     return sum(args) + sum(kwargs.values())
 
-plus_many_3(1, 2, 3, a=7, b=9)
-plus_many_3(1, 2)
-plus_many_3(a=7, c=9)
-plus_many_3()
+
+plus_many_3(1, 2, 3, a=7, b=9) # aici specificam atat parametrii pozitionali cat si parametrii cu nume
+plus_many_3(1, 2) # merge si daca specificam doar parametrii pozitionali
+plus_many_3(a=7, c=9)   # merge si daca specificam doar parametrii cu nume
+plus_many_3()# merge sa apelam si fara nici un argument
 # plus_many_3(a=1, 3) !!! -> Parametrii pozitionali pot fi pusi doar inainte de cei cu nume
+# Parametrii pozitionali ii pune in tupluri si pe ceilalti ii pune in dictionare, chit ca sunt, chit ca nu!
