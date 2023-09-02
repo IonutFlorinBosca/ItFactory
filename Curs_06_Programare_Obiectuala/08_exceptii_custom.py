@@ -1,5 +1,6 @@
-class CustomException(Exception):  # -> preia din clasa din paranteaza toate atributele
-    pass
+# Ca sa facem o exceptie custom trebuie sa cream o clasa care mosteneste din clasa "Exception"
+class CustomException(Exception):  # -> preia din clasa din paranteza toate atributele
+    pass # Nu definim nimic special, doar numele acestei functii ne intereseaza
 
 
 """
@@ -9,14 +10,14 @@ Daca da, sa se arunce o exceptie specifica
 """
 
 
-class ContaineNegativeNumbersException(Exception):
+class ContainsNegativeNumbersException(Exception):
     pass
 
 
 def verify_negative_numbers(numbers):
     for num in numbers:
         if num < 0:
-            raise ContaineNegativeNumbersException(f"Contine {num}")
+            raise ContainsNegativeNumbersException(f"Contine {num}")
 
 
 verify_negative_numbers([4, 5, 6, -1])
