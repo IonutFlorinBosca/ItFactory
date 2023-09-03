@@ -1,3 +1,4 @@
+##
 class Dog:
     age = 12  # atribut de clasa (class atribute) -> are aceeasi valoare pentru toate obiectele din clasa
     # atributele de clasa sunt in general folosite pentru a defini constante in interiorul unei clase
