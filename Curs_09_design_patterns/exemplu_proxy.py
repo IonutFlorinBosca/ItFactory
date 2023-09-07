@@ -5,7 +5,7 @@ lasand doar anumite operatii sa fie efectuate sau sa adauge pasi extra
 inainte sau dupa operatia in sine.
 Avantaje:
     -> poti controla obiectul real fara ca cei care il utilizeaza sa stie
-    -> poti controla ciclul de viata al obiectului real cand cei care il
+    -> poti controla ciclul de viata al obiectului real, pe cand cei care il
     utilizeaza nu le pasa despre asta
     -> obiectul proxy functioneaza chiar daca obiectul real nu este pregatit
     sau nu este disponibil

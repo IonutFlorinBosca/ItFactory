@@ -3,7 +3,8 @@ Singleton -> design pattern care ne permite sa avem o clasa care returneaza
 mereu aceeasi instanta
           -> de obicei se foloseste in situatii in ca nu ne intereseaza obiectul
           in sine ci doar anumite functionalitati ale acestuia
-Avantaje: -> poti fi sigur ca o clasa Singleton are doar o singura instanta
+Avantaje: -> se castiga mult timp de procesare
+        -> poti fi sigur ca o clasa Singleton are doar o singura instanta
         -> poti avea acces global catre aceasta instanta
         -> obiectul Singleton este initializat doar o singura data(prima data cand este cerut)
 Dezavantaje: -> poate masca un design defectuos , de exemplu atunci cand
@@ -37,7 +38,7 @@ class SingletonLogger:
 class SingletonFileLogger(SingletonLogger):  # Mostenirea facuta in acest fel duce la problema
     # ca obiectul instantei Singleton poate fi de tipul SingletonLogger,
     # nu SingletonFileLogger, daca el se creaaza inainte
-    # Ca si solutie vezi exemplul de mai joc cu SingletonLoggerMultiClass
+    # Ca si solutie vezi exemplul de mai jos cu SingletonLoggerMultiClass
     def __init__(self, file_name):
         self.file_name = file_name
 
@@ -54,6 +55,7 @@ class SingletonLoggerMultiClass:
     _instance = {}
 
     def __new__(cls, *args, **kwargs):
+        #metoda get() ne ajuta sa apelam clasa fara sa ne dea eroare daca nu exista
         if cls._instance.get(cls) is None:  # verifica daca exista o instanta pentru clasa curenta
             # daca nu exista, o creeaza
             cls._instance[cls] = super().__new__(cls)
@@ -69,5 +71,5 @@ l = SingletonLoggerMultiClass()
 s = SingletonFileLogger2("Hello.txt")
 print(l, s)
 l2 = SingletonLoggerMultiClass()
-s2 = SingletonFileLogger2("Hello.txt")
+s2 = SingletonFileLogger2("Hello2.txt")
 print(l2, s2)
