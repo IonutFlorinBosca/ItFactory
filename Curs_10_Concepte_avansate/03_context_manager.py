@@ -23,6 +23,7 @@ class FileManager:
     def __init__(self, file_name, mode):
         self.file_name = file_name
         self.mode = mode
+        # self.File este None pentru ca se deschide fisierul manual
         self.File = None
 
     def __enter__(self):

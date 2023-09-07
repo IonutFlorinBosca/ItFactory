@@ -25,7 +25,7 @@ trebuie sa implementeze doua metode:
 
 class EvenIterator:
     def __init__(self, n):
-        self.n = n  # n -> cate numere vrem sa generam
+        self.n = n  # n -> cate numere pare vrem sa generam
 
     def __iter__(self):
         self.generated_numbers = 0  # cate numere pare am generat pana acum
@@ -41,6 +41,7 @@ class EvenIterator:
             self.generated_numbers += 1  # crestem contorul numerelor gasit pana acum
             return self.current  # returnam numarul gasit
         return self.__next__()  # aici nu s-a gasit numar si se apeleaza mecanismul inca o data
+        #METODA RECURSIVA
 
 
 it = EvenIterator(10)

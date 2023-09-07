@@ -15,7 +15,7 @@ def gen():
     print("Am intrat din nou in functia generator")
     yield 100
 
-    print("Am intrat din nou in functia generator")
+    print("Am intrat a treia oara in functia generator")
 
 g = gen()
 print(next(g))
