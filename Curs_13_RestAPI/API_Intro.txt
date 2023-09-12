@@ -1,7 +1,7 @@
 API - Aplication Programming Interface -> permit aplicatiilor
-sortware sa comunice intre ele. Actioneaza ca un mediator intre 2
+software sa comunice intre ele. Actioneaza ca un mediator intre 2
 aplicatii, permitand uneia sa solicite date sau servicii de la
-cealalta si sa primeasca un raspuns inapoi
+cealalta si sa primeasca un raspuns inapoi.
 Fac posibil ca aplicatiile sa acceseze functii, date de pe alte
 platforme, deschizand noi posibilitati infinite de inovare si
 integrare!!

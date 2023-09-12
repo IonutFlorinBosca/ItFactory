@@ -1,7 +1,8 @@
 import requests
 from pprint import pprint
 
-# ! metoda 'put' face overwrite la intregul obiect astfel ca s-ar putea sa-i stearga anumite date
+# ! metoda 'put' face overwrite la intregul obiect astfel ca s-ar putea sa-i
+# stearga anumite date
 """
 Daca vrem sa pastram datele anterioare:
     - pastram in payload datele pe care nu vrem sa le modificam

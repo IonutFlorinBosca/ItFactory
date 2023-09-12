@@ -2,8 +2,8 @@ import requests
 from pprint import pprint
 
 """
-Spre deosebire de 'put', metoda 'patch' actualizeaza doar campurile care apar in payload si nu sterge niciun fel de 
-date de la resursele existente.
+Spre deosebire de 'put', metoda 'patch' actualizeaza doar campurile care apar 
+in payload si nu sterge niciun fel de date de la resursele existente.
 """
 
 URL = 'https://jsonplaceholder.typicode.com/posts/1'
