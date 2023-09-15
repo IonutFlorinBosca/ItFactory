@@ -18,3 +18,6 @@ def pets(request):
 def pet_detail(request, pet_id):
     pet = get_object_or_404(Pet, pk=pet_id)
     return render(request, 'pet_detail.html', {'pet': pet})
+
+def error_404(request, exception):
+    return render(request, 'error.html', {'error_message': 'eroare'})
