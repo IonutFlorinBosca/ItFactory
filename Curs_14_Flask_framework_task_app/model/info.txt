@@ -1,0 +1,4 @@
+In folderul data se afla un fisier csv cu 3 coloane si 3 randuri care reprezinta
+taskuri in format text.
+In folderul model se va creea o entitate care sa reprezinte fix conceptul de task.
+Aici se vor defini toate clasele specifice entitatilor din aplicatia noastra.

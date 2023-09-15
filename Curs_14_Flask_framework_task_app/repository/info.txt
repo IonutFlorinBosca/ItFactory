@@ -1,0 +1,3 @@
+Repository este mecanismul prin care facem acces la date si le manipulam
+In fisierul tasks.py se va deschide fisierul csv, se vor returna niste date,
+se va scrie in fisierul csv, se va modela raspunsul.

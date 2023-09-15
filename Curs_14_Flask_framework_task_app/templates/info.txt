@@ -1,0 +1,2 @@
+in acest folder templates se definesc fisierele html, cum o sa arate
+interfata grafica a aplicatiei

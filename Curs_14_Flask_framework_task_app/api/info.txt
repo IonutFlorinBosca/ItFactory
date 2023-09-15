@@ -1,0 +1,9 @@
+In api se definesc rutele/end-pointurile pentru toate metodele(get, post, patch, put, delete)
+Fisierul din folderul api este denumit identic cu fisierul din folderul
+repository pentru ca mapeaza aceeasi entitate.
+(Daca mai exista o entitate trebuie sa stim ca api-ul de la user e acolo,
+modelul de la user e acolo, repository-ul de la user e acolo).
+Nu putem sa le denumim diferit ca nu o sa stim sa le gasim.
+
+In partea asta de api vom folosi flask, iar ca sa putem sa scriem rutele in
+fisiere diferite vom folosi un concept numit blueprint.
